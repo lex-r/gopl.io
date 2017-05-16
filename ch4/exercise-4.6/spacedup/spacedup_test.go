@@ -96,6 +96,10 @@ func TestSpacedup(t *testing.T) {
 			data:     []byte("   世   界   "),
 			expected: []byte(" 世 界 "),
 		},
+		{
+			data:     []byte("   世世   界界界   "),
+			expected: []byte(" 世世 界界界 "),
+		},
 	}
 
 	for i, fxt := range fixtures {
